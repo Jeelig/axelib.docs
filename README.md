@@ -22,6 +22,11 @@ data == {
   content: '<p>This project is a...',
   menu: {...}
 }
+
+data = { 
+  "email": "your_name@provider.extension", 
+  "password":"my_password" 
+}
 ```
 Le mot de passe est haché en MD5.<br>
 La méthode renvoie une réponse success true si la création s'est bien passée et false, si une erreur s'est produite.<br>
