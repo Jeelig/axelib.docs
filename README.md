@@ -279,6 +279,10 @@ Si le mail est saisit dans la reqête en POST on envoie les paramètres title et
 Si le mail est dans un template, on envoie le paramètre template en POST contenant le nom du template.
 Si la personne ciblée n'est pas inscrite sur l'application mais son adresse mail connue, envoyer le paramètre email en POST.
 D'autres paramètres peuvent êtres transmis en POST pour alimenter le template.
+
+Il est possible d'envoyer des paramètres supplémentaires. Ceux-ci sont remplacés dans le template du mail : <strong>__param__</strong>
+En envoyant param en POST, cette chaine sera remplacée.
+Sinon, pour lire des données sur la table utilisateur, dans le template on ajoute : <strong>__user:param__</strong>
 ```php
 https://api.axelib.com/0.2/mail/user/{ID}
 
@@ -303,6 +307,11 @@ var data3 = {
 L'ID de l'utilisateur destinataire de la notification doit être fournie dans le GET. Si celui-ci possède un device il reçoit une notification push sur Android ou iOS
 ```php
 https://api.axelib.com/0.2/push/user/{ID}
+
+var data = { 
+	title: "Push title", 
+	message: "Push body … " 
+}
 ```
 
 
@@ -312,6 +321,12 @@ Le paiement est effectué grace à l'API de Stripe (entreprise
 spécialisée dans le domaine du paiement sur mobile)
 ```php
 https://api.axelib.com/0.2/charge/instance
+
+var data = { 
+	amount: total_amount, 
+	token: stripe_token_card, 
+	id: stripe_token_id 
+}
 ```
 
 
@@ -321,6 +336,10 @@ Cette méthode prend en paramètre POST le token
 d'enregistrement push du device qui emet l'appel et le sauvegarde pour un appel utltérieur
 ```php
 https://api.axelib.com/0.2/deviceinit/instance
+
+var data = { 
+	token: token_value 
+}
 ```
 
 
