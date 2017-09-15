@@ -6,6 +6,12 @@ Axelib Mobile BaaS API documentation. <br>This documentation best describes how 
 https://api.axelib.com/0.1/ 
 ```
 
+Axelib est un service dans le cloud disponible sous forme BaaS (Backend as a Service).
+Il expose aux développeurs une middleware qui est une web API accessible depuis une application.
+Axelib facilite le développement d'applications en exposant des méthodes qui agissent sur les entités du projet.
+API accessible depuis des applications Web et mobiles.<br>
+Axelib propose les fonctionnalités suivantes : Cloud storage, Push notifications …<br>
+Axelib possède sa propre API, permettant via des services intégrés, la gestion d'un projet comprenant des entités ce qui rend la mise en place beaucoup plus facile, pour les applucations orientées Web et mobile.
 
 
 ### Register
