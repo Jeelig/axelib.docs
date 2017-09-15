@@ -14,7 +14,7 @@ Axelib propose les fonctionnalités suivantes : Cloud storage, Push notification
 Axelib possède sa propre API, permettant via des services intégrés, la gestion d'un projet comprenant des entités ce qui rend la mise en place beaucoup plus facile, pour les applucations orientées Web et mobile.
 <br><br>
 Axelib provides functionnalities such as : <br>
-- <strong>User management</strong> : a user can register on an application, login and manage his data model<br>
+- <strong>User management</strong> : a user can register / login and manage his data model<br>
 - <strong>Cloud data storage</strong> :<br>
 - <strong>Mail</strong> :<br>
 - <strong>Push notifications</strong><br>
