@@ -20,8 +20,8 @@ Axelib provides functionnalities such as : <br>
 - <strong>Push notifications</strong><br>
 - <strong>Device management</strong> :<br>
 - <strong>File management</strong> :<br>
-- <strong>Facebook authentication</strong> :<br> Third party authentication with 
-- <strong>Paiement with Stripe</strong>
+- <strong>Facebook authentication</strong> : Third party authentication with graph API<br>
+- <strong>Paiement</strong> : Third party API with Stripe
 
 ### REGISTER
 
