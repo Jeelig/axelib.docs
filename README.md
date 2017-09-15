@@ -288,10 +288,6 @@ Si le mail est saisit dans la reqête en POST on envoie les paramètres title et
 Si le mail est dans un template, on envoie le paramètre template en POST contenant le nom du template.
 Si la personne ciblée n'est pas inscrite sur l'application mais son adresse mail connue, envoyer le paramètre email en POST.
 D'autres paramètres peuvent êtres transmis en POST pour alimenter le template.
-
-Il est possible d'envoyer des paramètres supplémentaires. Ceux-ci sont remplacés dans le template du mail : <strong>__param__</strong>
-En envoyant param en POST, cette chaine sera remplacée.
-Sinon, pour lire des données sur la table utilisateur, dans le template on ajoute : <strong>__user:param__</strong>
 ```php
 https://api.axelib.com/0.2/mail/user/{ID}
 
@@ -309,6 +305,10 @@ var data3 = {
 	"email": "my_email@provider.com"
 }
 ```
+Il est possible d'envoyer des paramètres supplémentaires. Ceux-ci sont remplacés dans le template du mail : <strong>__param__</strong>
+En envoyant param en POST, cette chaine sera remplacée.
+Sinon, pour lire des données sur la table utilisateur, dans le template on ajoute : <strong>__user:param__</strong>
+
 
 
 ### PUSH
