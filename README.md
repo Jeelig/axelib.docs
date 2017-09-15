@@ -67,28 +67,28 @@ Le lien envoyé est valable pendant une durée définie par projet.
 
 
 
-### changepwd
+### CHANGEPWD
 
 Le mot de passe de l'utilisateur (connecté) est mis à jour avec un 
 nouveau. Les paramètres password et new_password sont attendus
 
 
 
-### fblogin
+### FBLOGIN
 
 Authentifie l'utilisateur à partir de son compte facebook, via l'API
 Graph
 
 
 
-### post
+### POST
 
 Création d'un enregistrement en fonction des clés valeurs 
 envoyées. Si la valeur envoyée est un objet, un enregistrement est créé. Si la valeur est un tableau, cette méthode créera plusieurs enregistrement
 
 
 
-### get
+### GET
 
 L'ID de l'enregistrement, ainsi que son type, doit être fournit en 
 paramètre GET de la requête.
@@ -96,7 +96,7 @@ En utilisant le paramètre fields en POST de la requête, on affiche uniquement 
 
 
 
-### list
+### LIST
 
 Les 10 premiers élémenst sont retournés par défaut par ordre de 
 création décroissant.
@@ -162,14 +162,14 @@ var data = {
 ```
 
 
-### update
+### UPDATE
 
 En POST de la requête, uniquement les champs que l'on souhaite 
 mettre à jour
 
 
 
-### delete
+### DELETE
 
 L'ID de l'enregistrement, ainsi que son type, doit être fournit en 
 paramètre GET de la requête.
@@ -177,13 +177,13 @@ L'enregistrement est supprimé
 
 
 
-### count
+### COUNT
 
 Le nombre total des enregistrements est retourné
 
 
 
-### file
+### FILE
 
 Le fichier uploadé est sauvegardé, le service répond avec l'adresse
 URL du fichier ( https://files.axelib.com/{code_projet}/ )
@@ -196,20 +196,20 @@ Si aucun target ID, l'enregistrement est créé
 
 
 
-### query
+### QUERY
 
 La requête à exécuter doit exister dans la table @Query.
 Le numéro de version est passé en paramètre GET. D'autres paramètres peuvent êtres saisis en POST pour enrichir la requête
 
 
 
-### sql
+### SQL
 
 La requête SQL est passée en paramètre POST.
 C'est une reqête SQL classique mis à part que le nom de chaque table est précédé de : @table.
 Certaines instructions sont bloquées (delete, drop, …)
 
-### Mail
+### MAIL
 
 La fonction mail permet d'envoyer un email à un utilisateur inscrit sur l'application. Le mail peut être saisi dans l'appel en POST ou alors provenir d'un template saisi dans la table @Exchange.
 Si l'utilisateur est inscrit sur l'application, on fournit son ID, en GET.
@@ -220,20 +220,20 @@ D'autres paramètres peuvent êtres transmis en POST pour alimenter le template.
 
 
 
-### push
+### PUSH
 
 L'ID de l'utilisateur destinataire de la notification doit être fournie dans le GET. Si celui-ci possède un device il reçoit une notification push sur Android ou iOS
 
 
 
-### charge
+### CHARGE
 
 Le paiement est effectué grace à l'API de Stripe (entreprise 
 spécialisée dans le domaine du paiement sur mobile)
 
 
 
-### deviceinit
+### DEVICEINIT
 
 Cette méthode prend en paramètre POST le token 
 d'enregistrement push du device qui emet l'appel et le sauvegarde pour un appel utltérieur
