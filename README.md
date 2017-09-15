@@ -105,6 +105,20 @@ Authentifie l'utilisateur à partir de son compte facebook, via l'API
 Graph
 ```php
 https://api.axelib.com/0.2/fblogin/user
+
+var data = { 
+	email:"youremail@provider.com", 
+	first_name:"Test", 
+	gender:"male", 
+	id:"10212937671531750", 
+	last_name:"KELLY", 
+	link:"https://www.facebook.com/app_scoped_user_id/10212937671531750/", 
+	locale:"fr_FR", 
+	name:"Test KELLY", 
+	timezone:2, 
+	updated_time:"2017-01-22T20:07:58+0000", 
+	verified:true 
+}
 ```
 
 
