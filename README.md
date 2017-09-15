@@ -78,6 +78,10 @@ passe. L'adresse email est transmise en paramètre.
 Le lien envoyé est valable pendant une durée définie par projet.
 ```php
 https://api.axelib.com/0.2/forgotpwd/user
+
+var data = {
+	"email": "your_name@provider.extension" 
+}
 ```
 
 
@@ -88,7 +92,7 @@ nouveau. Les paramètres password et new_password sont attendus
 ```php
 https://api.axelib.com/0.2/changepwd/user
 
-var data = { 
+var data = {
 	"password": "current", 
 	"new_password": "new" 
 }
@@ -277,6 +281,20 @@ Si la personne ciblée n'est pas inscrite sur l'application mais son adresse mai
 D'autres paramètres peuvent êtres transmis en POST pour alimenter le template.
 ```php
 https://api.axelib.com/0.2/mail/user/{ID}
+
+var data1 = { 
+	"title": "Email title", 
+	"body": "Email body here …" 
+}
+
+var data2 = { 
+	"template": "transaction" 
+}
+
+var data3 = { 
+	"template": "transaction", 
+	"email": "my_email@provider.com"
+}
 ```
 
 
