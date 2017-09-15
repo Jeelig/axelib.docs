@@ -87,6 +87,11 @@ Le mot de passe de l'utilisateur (connecté) est mis à jour avec un
 nouveau. Les paramètres password et new_password sont attendus
 ```php
 https://api.axelib.com/0.2/changepwd/user
+
+var data = { 
+	"password": "current", 
+	"new_password": "new" 
+}
 ```
 
 
@@ -105,6 +110,11 @@ Création d'un enregistrement en fonction des clés valeurs
 envoyées. Si la valeur envoyée est un objet, un enregistrement est créé. Si la valeur est un tableau, cette méthode créera plusieurs enregistrement
 ```php
 https://api.axelib.com/0.2/post/{entity}
+
+var data = { 
+	"field_name": "field_value"
+	... 
+}
 ```
 
 
@@ -115,6 +125,10 @@ paramètre GET de la requête.
 En utilisant le paramètre fields en POST de la requête, on affiche uniquement les champs voulus.
 ```php
 https://api.axelib.com/0.2/get/{entity}/{ID}
+
+var data = { 
+	"fields": "field_1, field_2, ..."
+}
 ```
 
 
