@@ -11,8 +11,14 @@ https://api.axelib.com/0.1/
 ### Register
 
 Cette méthode crée un nouvel utilisateur dans la table "user" liée 
+```php
+https://api.axelib.com/0.2/register/user
+```
 au projet choisit.<br>
 Les paramètres email et password sont attendu en POST.
+```js
+{ "email": "your_name@provider.extension", "password":"my_password" }
+```
 Le mot de passe est haché en MD5.<br>
 La méthode renvoie une réponse success true si la création s'est bien passée et false, si une erreur s'est produite.<br>
 Le champs nickname prend la valeur de la chaine devant l'@
