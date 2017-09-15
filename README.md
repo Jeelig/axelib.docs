@@ -1,9 +1,9 @@
 # axelib
 
-Axelib Mobile BaaS API documentation. This documentation best describes how axelib REST API works.
+Axelib Mobile BaaS API documentation. <br>This documentation best describes how axelib REST API works.
 
 ```php
-https://api.axelib.com/0.1/ ...
+https://api.axelib.com/0.1/ 
 ```
 
 These fetcher functions are available:
