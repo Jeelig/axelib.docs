@@ -66,7 +66,9 @@ var data = {
 Déconnecte un utilisateur connecté à une application.
 Sa session est terminée, son token devient invalide.
 Aucune donnée en POST
-
+```php
+https://api.axelib.com/0.2/logout/user
+```
 
 
 ### FORGOTPWD
@@ -74,28 +76,36 @@ Aucune donnée en POST
 Envoie un lien par mail à l'utilisateur pour réinitialiser son mot de 
 passe. L'adresse email est transmise en paramètre.
 Le lien envoyé est valable pendant une durée définie par projet.
-
+```php
+https://api.axelib.com/0.2/forgotpwd/user
+```
 
 
 ### CHANGEPWD
 
 Le mot de passe de l'utilisateur (connecté) est mis à jour avec un 
 nouveau. Les paramètres password et new_password sont attendus
-
+```php
+https://api.axelib.com/0.2/changepwd/user
+```
 
 
 ### FBLOGIN
 
 Authentifie l'utilisateur à partir de son compte facebook, via l'API
 Graph
-
+```php
+https://api.axelib.com/0.2/fblogin/user
+```
 
 
 ### POST
 
 Création d'un enregistrement en fonction des clés valeurs 
 envoyées. Si la valeur envoyée est un objet, un enregistrement est créé. Si la valeur est un tableau, cette méthode créera plusieurs enregistrement
-
+```php
+https://api.axelib.com/0.2/post/{entity}
+```
 
 
 ### GET
@@ -103,7 +113,9 @@ envoyées. Si la valeur envoyée est un objet, un enregistrement est créé. Si 
 L'ID de l'enregistrement, ainsi que son type, doit être fournit en 
 paramètre GET de la requête.
 En utilisant le paramètre fields en POST de la requête, on affiche uniquement les champs voulus.
-
+```php
+https://api.axelib.com/0.2/get/{entity}/{ID}
+```
 
 
 ### LIST
@@ -176,7 +188,9 @@ var data = {
 
 En POST de la requête, uniquement les champs que l'on souhaite 
 mettre à jour
-
+```php
+https://api.axelib.com/0.2/update/{entity}/{ID}
+```
 
 
 ### DELETE
@@ -184,13 +198,17 @@ mettre à jour
 L'ID de l'enregistrement, ainsi que son type, doit être fournit en 
 paramètre GET de la requête.
 L'enregistrement est supprimé
-
+```php
+https://api.axelib.com/0.2/delete/{entity}/{ID}
+```
 
 
 ### COUNT
 
 Le nombre total des enregistrements est retourné
-
+```php
+https://api.axelib.com/0.2/count/{entity}
+```
 
 
 ### FILE
@@ -198,19 +216,31 @@ Le nombre total des enregistrements est retourné
 Le fichier uploadé est sauvegardé, le service répond avec l'adresse
 URL du fichier ( https://files.axelib.com/{code_projet}/ )
 On peut également renseigner le champs folder pour typer le fichier et les ranger dans la même catégorie.
-
+```php
+https://api.axelib.com/0.2/file/upload
+```
 Si le fichier est une image, les méta données de la photo sont sauvegardées (position géostationnaire, appareil de photo…).
 Des miniatures sont créées aux tailles suivantes (1024px, 480px, 150px et 75px)
 Si les paramètres target_table, target_field et target_id sont renseignés, l'image est ajouté à un enregistrement existant.
 Si aucun target ID, l'enregistrement est créé
-
+```php
+var data = {
+  file: myFile, 
+  target_table: "tab_name", 
+  target_field: "field_name", 
+  target_id: "id", 
+  "folder": "folder_name"
+}
+```
 
 
 ### QUERY
 
 La requête à exécuter doit exister dans la table @Query.
 Le numéro de version est passé en paramètre GET. D'autres paramètres peuvent êtres saisis en POST pour enrichir la requête
-
+```php
+https://api.axelib.com/0.2/query/{query_name}/{version}
+```
 
 
 ### SQL
@@ -218,6 +248,10 @@ Le numéro de version est passé en paramètre GET. D'autres paramètres peuvent
 La requête SQL est passée en paramètre POST.
 C'est une reqête SQL classique mis à part que le nom de chaque table est précédé de : @table.
 Certaines instructions sont bloquées (delete, drop, …)
+```php
+https://api.axelib.com/0.2/sql/query
+```
+
 
 ### MAIL
 
@@ -227,34 +261,35 @@ Si le mail est saisit dans la reqête en POST on envoie les paramètres title et
 Si le mail est dans un template, on envoie le paramètre template en POST contenant le nom du template.
 Si la personne ciblée n'est pas inscrite sur l'application mais son adresse mail connue, envoyer le paramètre email en POST.
 D'autres paramètres peuvent êtres transmis en POST pour alimenter le template.
-
+```php
+https://api.axelib.com/0.2/mail/user/{ID}
+```
 
 
 ### PUSH
 
 L'ID de l'utilisateur destinataire de la notification doit être fournie dans le GET. Si celui-ci possède un device il reçoit une notification push sur Android ou iOS
-
+```php
+https://api.axelib.com/0.2/push/user/{ID}
+```
 
 
 ### CHARGE
 
 Le paiement est effectué grace à l'API de Stripe (entreprise 
 spécialisée dans le domaine du paiement sur mobile)
-
+```php
+https://api.axelib.com/0.2/charge/instance
+```
 
 
 ### DEVICEINIT
 
 Cette méthode prend en paramètre POST le token 
 d'enregistrement push du device qui emet l'appel et le sauvegarde pour un appel utltérieur
-
-
-
-
-
-
-
-
+```php
+https://api.axelib.com/0.2/deviceinit/instance
+```
 
 
 
