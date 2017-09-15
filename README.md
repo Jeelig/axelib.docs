@@ -124,9 +124,9 @@ Le nombre total des enregistrements est retourné
 ### file
 
 Le fichier uploadé est sauvegardé, le service répond avec l'adresse
-URL du fichier (https://files.axelib.com/{code_projet}/….
+URL du fichier ( https://files.axelib.com/{code_projet}/ )
 On peut également renseigner le champs folder pour typer le fichier et les ranger dans la même catégorie.
----
+
 Si le fichier est une image, les méta données de la photo sont sauvegardées (position géostationnaire, appareil de photo…).
 Des miniatures sont créées aux tailles suivantes (1024px, 480px, 150px et 75px)
 Si les paramètres target_table, target_field et target_id sont renseignés, l'image est ajouté à un enregistrement existant.
