@@ -103,18 +103,35 @@ Filters :
 Using /all returns the whole table  (all the records)
 Sending ax_full_search as POST  param searches on all fields the text given
 
+<strong>Fields</strong>
+
 ```js
 var data = {
   "fields": "field_1, field_2, ..." 
 }
+```
+
+<strong>Ordering</strong>
+
+```js
 var data = {
   "orderBy": "field:(asc|desc)" /* ex: "orderBy": "id:asc" */
 }
-var data {
+```
+
+<strong>Ordering</strong>
+
+```js
+var data = {
   "name": "like:peter",
   "age": ">=:30", 
   "name": "soundex:peter" 
 }
+```
+
+<strong>Ordering</strong>
+
+```js
 var data = {
   "join:type,color": "user.type_id=type.id&test=1,height>=15" 
 }
