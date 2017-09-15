@@ -17,13 +17,7 @@ https://api.axelib.com/0.2/register/user
 au projet choisit.<br>
 Les paramètres email et password sont attendu en POST.
 ```js
-data == {
-  title: 'My Project',
-  content: '<p>This project is a...',
-  menu: {...}
-}
-
-data = { 
+data = {
   "email": "your_name@provider.extension", 
   "password":"my_password" 
 }
@@ -34,3 +28,78 @@ Le champs nickname prend la valeur de la chaine devant l'@
 L'utilisateur reçoit un mail, avec un lien lui proposant de valider son inscription.<br>
 Des informations autre que l'email et le mot de passe peuvent êtres transmises. Elles peuvent meme être rendues obligatoires en renseignant le champs reg_fields de la table projet.<br>
 Les règles du mot de passe sont portées par le champs password_rules
+
+
+
+
+### login
+
+
+
+### logout
+
+
+
+### forgotpwd
+
+
+
+### changepwd
+
+
+
+### fblogin
+
+
+
+### post
+
+
+
+### get
+
+
+
+### list
+
+
+
+### update
+
+
+
+### delete
+
+
+
+### count
+
+
+
+### file
+
+
+
+### query
+
+
+
+### sql
+
+
+
+### push
+
+
+
+### charge
+
+
+
+### deviceinit
+
+
+
+
+
+
