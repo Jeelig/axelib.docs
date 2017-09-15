@@ -2,7 +2,7 @@
 
 Axelib MBaaS API documentation
 
-```js
+```php
 https://api.axelib.com/0.1/ ...
 ```
 
