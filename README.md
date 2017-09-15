@@ -33,7 +33,9 @@ Les règles du mot de passe sont portées par le champs password_rules
 
 
 ### login
-
+```php
+https://api.axelib.com/0.2/register/user
+```
 Le login permet d'uthentifier un utilisateur enregistré dans la table
 "user" à l'aide de son email et mot de passe. Ce sont les deux seuls paramètres attendus.
 En cas de succès, on recoit en retour le token de l'utilisateur ainsi que toutes les données relatives à l'utilisateur
@@ -41,7 +43,9 @@ En cas de succès, on recoit en retour le token de l'utilisateur ainsi que toute
 
 
 ### logout
-
+```php
+https://api.axelib.com/0.2/register/user
+```
 Déconnecte un utilisateur connecté à une application.
 Sa session est terminée, son token devient invalide.
 Aucune donnée en POST
@@ -49,7 +53,9 @@ Aucune donnée en POST
 
 
 ### forgotpwd
-
+```php
+https://api.axelib.com/0.2/register/user
+```
 Envoie un lien par mail à l'utilisateur pour réinitialiser son mot de 
 passe. L'adresse email est transmise en paramètre.
 Le lien envoyé est valable pendant une durée définie par projet.
