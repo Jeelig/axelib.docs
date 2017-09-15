@@ -38,7 +38,8 @@ Le login permet d'uthentifier un utilisateur enregistré dans la table
 En cas de succès, on recoit en retour le token de l'utilisateur ainsi que toutes les données relatives à l'utilisateur
 ```js
 https://api.axelib.com/0.2/login/user 
-
+```
+```js
 var data = {
   "email": "your_name@provider.extension", 
   "password":"my_password" 
