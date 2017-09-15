@@ -119,7 +119,7 @@ var data = {
 }
 ```
 
-<strong>Ordering</strong>
+<strong>Filtering</strong>
 
 ```js
 var data = {
