@@ -14,7 +14,7 @@ Axelib propose les fonctionnalités suivantes : Cloud storage, Push notification
 Axelib possède sa propre API, permettant via des services intégrés, la gestion d'un projet comprenant des entités ce qui rend la mise en place beaucoup plus facile, pour les applucations orientées Web et mobile.
 
 
-### Register
+### REGISTER
 
 Cette méthode crée un nouvel utilisateur dans la table "user" liée 
 au projet choisit.
@@ -37,7 +37,7 @@ var data = {
 
 
 
-### login
+### LOGIN
 
 Le login permet d'uthentifier un utilisateur enregistré dans la table
 "user" à l'aide de son email et mot de passe. Ce sont les deux seuls paramètres attendus.
@@ -51,7 +51,7 @@ var data = {
 }
 ```
 
-### logout
+### LOGOUT
 
 Déconnecte un utilisateur connecté à une application.
 Sa session est terminée, son token devient invalide.
@@ -59,7 +59,7 @@ Aucune donnée en POST
 
 
 
-### forgotpwd
+### FORGOTPWD
 
 Envoie un lien par mail à l'utilisateur pour réinitialiser son mot de 
 passe. L'adresse email est transmise en paramètre.
