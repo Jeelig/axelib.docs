@@ -258,6 +258,11 @@ La requête à exécuter doit exister dans la table @Query.
 Le numéro de version est passé en paramètre GET. D'autres paramètres peuvent êtres saisis en POST pour enrichir la requête
 ```php
 https://api.axelib.com/0.2/query/{query_name}/{version}
+
+var data = { 
+	"param_name": "param_value", 
+	... 
+}
 ```
 
 
@@ -268,6 +273,10 @@ C'est une reqête SQL classique mis à part que le nom de chaque table est préc
 Certaines instructions sont bloquées (delete, drop, …)
 ```php
 https://api.axelib.com/0.2/sql/query
+
+var data = { 
+	"sql": "SELECT * FROM `@table.table_name`" 
+}
 ```
 
 
