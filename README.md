@@ -1,11 +1,9 @@
 # axelib
 
-Axelib Mobile BaaS API documentation. This page best describes how to use the axelib REST API, through http services
+Axelib MBaaS API documentation
 
 ```js
-Flatdoc.run({
-  fetcher: Flatdoc.github('rstacruz/backbone-patterns');
-});
+https://api.axelib.com/0.1/ ...
 ```
 
 These fetcher functions are available:
