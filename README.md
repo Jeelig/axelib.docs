@@ -102,6 +102,9 @@ Filters :
  - ordering : orderBy
 Using /all returns the whole table  (all the records)
 Sending ax_full_search as POST  param searches on all fields the text given
+```js
+https://api.axelib.com/0.2/list/{entity}/{page}/{nb_item}
+```
 
 <strong>Fields</strong>
 
