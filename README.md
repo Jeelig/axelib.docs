@@ -25,24 +25,6 @@ Axelib provides functionnalities such as : <br>
 - <strong>Facebook authentication</strong> : Third party authentication with graph API<br>
 - <strong>Paiement</strong> : Third party API with Stripe
 
-Methods
-=======
-
-Flatdoc is a small JavaScript file that fetches Markdown files and renders them
-as full pages. Essentially, it's the easiest
-way to make open source documentation from *Readme* files.
-
- * No server-side components
- * No build process needed
- * Deployable via GitHub Pages
- * Can fetch GitHub Readme files
- * Gorgeous default theme (and it's responsive)
- * Just create an HTML file and deploy!
-
-*Current version: [v0.1]*
-
-[![Build Status](https://travis-ci.org/rstacruz/flatdoc.svg?branch=gh-pages)](https://travis-ci.org/rstacruz/flatdoc)
-
 Getting started
 ---------------
 
@@ -67,6 +49,24 @@ Axelib provides functionnalities such as : <br>
 - <strong>File management</strong> :<br>
 - <strong>Facebook authentication</strong> : Third party authentication with graph API<br>
 - <strong>Paiement</strong> : Third party API with Stripe
+
+Methods
+=======
+
+Flatdoc is a small JavaScript file that fetches Markdown files and renders them
+as full pages. Essentially, it's the easiest
+way to make open source documentation from *Readme* files.
+
+ * No server-side components
+ * No build process needed
+ * Deployable via GitHub Pages
+ * Can fetch GitHub Readme files
+ * Gorgeous default theme (and it's responsive)
+ * Just create an HTML file and deploy!
+
+*Current version: [v0.1]*
+
+
 
 ### REGISTER
 
