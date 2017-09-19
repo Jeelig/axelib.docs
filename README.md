@@ -4,7 +4,7 @@ axelib
 Axelib Mobile BaaS API documentation. <br>This documentation best describes how axelib REST API works.
 
 
-Flatdoc
+Methods
 =======
 
 Flatdoc is a small JavaScript file that fetches Markdown files and renders them
