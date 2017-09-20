@@ -28,12 +28,7 @@ Axelib provides functionnalities such as : <br>
 Getting started
 ---------------
 
-```js
-var headers = {
-  "projectID": "your_project_id", 
-  "token":"your_given_token" 
-}
-```
+
 
 In the Axelib platform, a user can have multiple projects.<br>
 To create a project you just need to setup a new project name.
@@ -45,6 +40,12 @@ A user not identified is considered as a <strong>guest</strong>, a user identifi
 This categorization helps Axelib know ones habilitations. When you create an entity, you can choose the access level, basically who has access to this entity.<br><br>
 The user authentication is made through the login method described below. Once authenticated, the user has an active session on axelib. A <strong>token</strong> is created and returned along with the login result. This token has to be sent in any query to identify the user. The token is sent in the headers, next to the project ID mentioned aboved.
 
+```js
+var headers = {
+  "projectID": "your_project_id", 
+  "token":"your_given_token" 
+}
+```
 
 Methods
 =======
