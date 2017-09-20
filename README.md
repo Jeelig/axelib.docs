@@ -74,10 +74,6 @@ way to make open source documentation from *Readme* files.
 
 *Current version: [v0.1]*
 
-> "From a certain point onward there is no longer any turning back. That is the
-> point that must be reached."  
-> -- Franz Kafka
-
 
 
 ### REGISTER
@@ -101,9 +97,6 @@ var data = {
 }
 ```
 
-> "From a certain point onward there is no longer any turning back. That is the
-> point that must be reached."  
-> --Franz Kafka
 
 
 
