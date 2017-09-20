@@ -55,10 +55,6 @@ var headers = {
 Methods
 =======
 
-> "From a certain point onward there is no longer any turning back. That is the
-> point that must be reached."  
-> -- Franz Kafka
-
 Flatdoc is a small JavaScript file that fetches Markdown files and renders them
 as full pages. Essentially, it's the easiest
 way to make open source documentation from *Readme* files.
@@ -72,13 +68,13 @@ way to make open source documentation from *Readme* files.
 
 *Current version: [v0.1]*
 
+> "From a certain point onward there is no longer any turning back. That is the
+> point that must be reached."  
+> -- Franz Kafka
+
 
 
 ### REGISTER
-
-> "From a certain point onward there is no longer any turning back. That is the
-> point that must be reached."  
-> --Franz Kafka
 
 Cette méthode crée un nouvel utilisateur dans la table "user" liée 
 au projet choisit.
@@ -98,6 +94,10 @@ var data = {
   "password":"my_password" 
 }
 ```
+
+> "From a certain point onward there is no longer any turning back. That is the
+> point that must be reached."  
+> --Franz Kafka
 
 
 
