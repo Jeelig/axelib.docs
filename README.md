@@ -70,7 +70,7 @@ way to make open source documentation from *Readme* files.
 Cette méthode crée un nouvel utilisateur dans la table "user" liée 
 au projet choisit.
 ```php
-https://api.axelib.com/0.2/register/user
+https://api.axelib.com/0.1/register/user
 ```
 Les paramètres `email` et `password` sont attendu en POST.<br>
 Le mot de passe est haché en MD5.<br>
@@ -94,7 +94,7 @@ Le login permet d'uthentifier un utilisateur enregistré dans la table
 "user" à l'aide de son email et mot de passe. Ce sont les deux seuls paramètres attendus.
 En cas de succès, on recoit en retour le token de l'utilisateur ainsi que toutes les données relatives à l'utilisateur
 ```js
-https://api.axelib.com/0.2/login/user 
+https://api.axelib.com/0.1/login/user 
 
 var data = {
   "email": "your_name@provider.extension", 
@@ -108,7 +108,7 @@ Déconnecte un utilisateur connecté à une application.
 Sa session est terminée, son token devient invalide.
 Aucune donnée en POST
 ```php
-https://api.axelib.com/0.2/logout/user
+https://api.axelib.com/0.1/logout/user
 ```
 
 
@@ -118,7 +118,7 @@ Envoie un lien par mail à l'utilisateur pour réinitialiser son mot de
 passe. L'adresse email est transmise en paramètre.
 Le lien envoyé est valable pendant une durée définie par projet.
 ```php
-https://api.axelib.com/0.2/forgotpwd/user
+https://api.axelib.com/0.1/forgotpwd/user
 
 var data = {
 	"email": "your_name@provider.extension" 
@@ -131,7 +131,7 @@ var data = {
 Le mot de passe de l'utilisateur (connecté) est mis à jour avec un 
 nouveau. Les paramètres password et new_password sont attendus
 ```php
-https://api.axelib.com/0.2/changepwd/user
+https://api.axelib.com/0.1/changepwd/user
 
 var data = {
 	"password": "current", 
@@ -145,7 +145,7 @@ var data = {
 Authentifie l'utilisateur à partir de son compte facebook, via l'API
 Graph
 ```php
-https://api.axelib.com/0.2/fblogin/user
+https://api.axelib.com/0.1/fblogin/user
 
 var data = { 
 	email:"youremail@provider.com", 
@@ -168,7 +168,7 @@ var data = {
 Création d'un enregistrement en fonction des clés valeurs 
 envoyées. Si la valeur envoyée est un objet, un enregistrement est créé. Si la valeur est un tableau, cette méthode créera plusieurs enregistrement
 ```php
-https://api.axelib.com/0.2/post/{entity}
+https://api.axelib.com/0.1/post/{entity}
 
 var data = { 
 	"field_name": "field_value"
@@ -183,7 +183,7 @@ L'ID de l'enregistrement, ainsi que son type, doit être fournit en
 paramètre GET de la requête.
 En utilisant le paramètre fields en POST de la requête, on affiche uniquement les champs voulus.
 ```php
-https://api.axelib.com/0.2/get/{entity}/{ID}
+https://api.axelib.com/0.1/get/{entity}/{ID}
 
 var data = { 
 	"fields": "field_1, field_2, ..."
@@ -204,7 +204,7 @@ Filters :
 Using /all returns the whole table  (all the records)
 Sending ax_full_search as POST  param searches on all fields the text given
 ```js
-https://api.axelib.com/0.2/list/{entity}/{page}/{nb_item}
+https://api.axelib.com/0.1/list/{entity}/{page}/{nb_item}
 ```
 
 <strong>Fields</strong>
@@ -262,7 +262,7 @@ var data = {
 En POST de la requête, uniquement les champs que l'on souhaite 
 mettre à jour
 ```php
-https://api.axelib.com/0.2/update/{entity}/{ID}
+https://api.axelib.com/0.1/update/{entity}/{ID}
 ```
 
 
@@ -272,7 +272,7 @@ L'ID de l'enregistrement, ainsi que son type, doit être fournit en
 paramètre GET de la requête.
 L'enregistrement est supprimé
 ```php
-https://api.axelib.com/0.2/delete/{entity}/{ID}
+https://api.axelib.com/0.1/delete/{entity}/{ID}
 ```
 
 
@@ -280,7 +280,7 @@ https://api.axelib.com/0.2/delete/{entity}/{ID}
 
 Le nombre total des enregistrements est retourné
 ```php
-https://api.axelib.com/0.2/count/{entity}
+https://api.axelib.com/0.1/count/{entity}
 ```
 
 
@@ -290,7 +290,7 @@ Le fichier uploadé est sauvegardé, le service répond avec l'adresse
 URL du fichier ( https://files.axelib.com/{code_projet}/ )
 On peut également renseigner le champs folder pour typer le fichier et les ranger dans la même catégorie.
 ```php
-https://api.axelib.com/0.2/file/upload
+https://api.axelib.com/0.1/file/upload
 ```
 Si le fichier est une image, les méta données de la photo sont sauvegardées (position géostationnaire, appareil de photo…).
 Des miniatures sont créées aux tailles suivantes (1024px, 480px, 150px et 75px)
@@ -312,7 +312,7 @@ var data = {
 La requête à exécuter doit exister dans la table @Query.
 Le numéro de version est passé en paramètre GET. D'autres paramètres peuvent êtres saisis en POST pour enrichir la requête
 ```php
-https://api.axelib.com/0.2/query/{query_name}/{version}
+https://api.axelib.com/0.1/query/{query_name}/{version}
 
 var data = { 
 	"param_name": "param_value", 
@@ -327,7 +327,7 @@ La requête SQL est passée en paramètre POST.
 C'est une reqête SQL classique mis à part que le nom de chaque table est précédé de : @table.
 Certaines instructions sont bloquées (delete, drop, …)
 ```php
-https://api.axelib.com/0.2/sql/query
+https://api.axelib.com/0.1/sql/query
 
 var data = { 
 	"sql": "SELECT * FROM `@table.table_name`" 
@@ -344,7 +344,7 @@ Si le mail est dans un template, on envoie le paramètre template en POST conten
 Si la personne ciblée n'est pas inscrite sur l'application mais son adresse mail connue, envoyer le paramètre email en POST.
 D'autres paramètres peuvent êtres transmis en POST pour alimenter le template.
 ```php
-https://api.axelib.com/0.2/mail/user/{ID}
+https://api.axelib.com/0.1/mail/user/{ID}
 
 var data1 = { 
 	"title": "Email title", 
@@ -370,7 +370,7 @@ Sinon, pour lire des données sur la table utilisateur, dans le template on ajou
 
 L'ID de l'utilisateur destinataire de la notification doit être fournie dans le GET. Si celui-ci possède un device il reçoit une notification push sur Android ou iOS
 ```php
-https://api.axelib.com/0.2/push/user/{ID}
+https://api.axelib.com/0.1/push/user/{ID}
 
 var data = { 
 	title: "Push title", 
@@ -384,7 +384,7 @@ var data = {
 Le paiement est effectué grace à l'API de Stripe (entreprise 
 spécialisée dans le domaine du paiement sur mobile)
 ```php
-https://api.axelib.com/0.2/charge/instance
+https://api.axelib.com/0.1/charge/instance
 
 var data = { 
 	amount: total_amount, 
@@ -399,7 +399,7 @@ var data = {
 Cette méthode prend en paramètre POST le token 
 d'enregistrement push du device qui emet l'appel et le sauvegarde pour un appel utltérieur
 ```php
-https://api.axelib.com/0.2/deviceinit/instance
+https://api.axelib.com/0.1/deviceinit/instance
 
 var data = { 
 	token: token_value 
