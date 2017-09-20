@@ -25,10 +25,14 @@ Axelib provides functionnalities such as : <br>
 - <strong>Facebook authentication</strong> : Third party authentication with graph API<br>
 - <strong>Paiement</strong> : Third party API with Stripe
 
+> "From a certain point onward there is no longer any turning back. That is the
+> point that must be reached."  
+> --Franz Kafka
+
+
+
 Getting started
 ---------------
-
-
 
 In the Axelib platform, a user can have multiple projects.<br>
 To create a project you just need to setup a new project name.
