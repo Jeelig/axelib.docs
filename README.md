@@ -7,6 +7,10 @@ Axelib Mobile BaaS API documentation. <br>This documentation best describes how 
 https://api.axelib.com/0.1/ 
 ```
 
+> "From a certain point onward there is no longer any turning back. That is the
+> point that must be reached."  
+> --Franz Kafka
+
 Axelib est un service dans le cloud disponible sous forme BaaS (Backend as a Service).
 Il expose aux développeurs une middleware qui est une web API accessible depuis une application.
 Axelib facilite le développement d'applications en exposant des méthodes qui agissent sur les entités du projet.
@@ -25,9 +29,7 @@ Axelib provides functionnalities such as : <br>
 - <strong>Facebook authentication</strong> : Third party authentication with graph API<br>
 - <strong>Paiement</strong> : Third party API with Stripe
 
-> "From a certain point onward there is no longer any turning back. That is the
-> point that must be reached."  
-> --Franz Kafka
+
 
 
 
