@@ -41,10 +41,6 @@ This categorization helps Axelib know ones habilitations. When you create an ent
 The user authentication is made through the login method described below. Once authenticated, the user has an active session on axelib. A <strong>token</strong> is created and returned along with the login result. This token has to be sent in any query to identify the user. The token is sent in the headers, next to the project ID mentioned aboved.
 
 
-[Default theme template >][template]
-
-[Blank template >][blank]
-
 
 ```js
 var headers = {
