@@ -32,23 +32,16 @@ Getting started
 https://api.axelib.com/0.1/ 
 ```
 
-Axelib est un service dans le cloud disponible sous forme BaaS (Backend as a Service).
-Il expose aux développeurs une middleware qui est une web API accessible depuis une application.
-Axelib facilite le développement d'applications en exposant des méthodes qui agissent sur les entités du projet.
-API accessible depuis des applications Web et mobiles.<br>
-Axelib propose les fonctionnalités suivantes : Cloud storage, Push notifications …<br>
-Axelib possède sa propre API, permettant via des services intégrés, la gestion d'un projet comprenant des entités ce qui rend la mise en place beaucoup plus facile, pour les applucations orientées Web et mobile.
-<br><br>
-Axelib provides functionnalities such as : <br> 
+In the Axelib platform, a user can have multiple projects.
+To create a project you just need to setup a new project name.
+For each project you have multiple entities, for each entity you have a table.
+The Axelib API identification factor is the project code. That being said, entities with the same names cannot exist in the same project. But you can create entities with the same exact name in a project.
+Each API call needs to have the parameter ProjectID set in the headers of the query, which refers to your project code. With this code, the project targeted can be identified.
+Axelib provide a strong user management system, with login and registration methods.
+A user not identified is considered as a guest, a user identified is called user. The user owner of a data (record was created by him) is a owner. An admin is a user admin of the application.
+This categorization helps Axelib know ones habilitations. When you create an entity, you can choose the access level, basically who has access to this entity.
+The user authentication is made through the login method described below. Once authenticated, the user has an active session on axelib. A token is created and returned along with the login result. This token has to be sent in any query to identify the user. The token is sent in the headers, next to the project ID mentioned aboved.
 
-- <strong>User management</strong> : a user can register / login and manage his data model<br>
-- <strong>Cloud data storage</strong> :<br>
-- <strong>Mail</strong> :<br>
-- <strong>Push notifications</strong><br>
-- <strong>Device management</strong> :<br>
-- <strong>File management</strong> :<br>
-- <strong>Facebook authentication</strong> : Third party authentication with graph API<br>
-- <strong>Paiement</strong> : Third party API with Stripe
 
 Methods
 =======
