@@ -214,12 +214,16 @@ var data = {
 	"fields": "field_1, field_2, ..."
 }
 ```
-La méthode GET est également utilisée pour afficher les informations légales relatives à l'application utilisée.<br>
+La méthode GET est également utilisée pour afficher les informations légales relatives à l'application utilisée.<br><br>
 - Mentions légales / Conditions d'utilisation (`terms_of_service`)<br>
 - Politique de confidentialité (`privay_policy`)<br>
 - Règles relatives à la vie privée (`cookies_polity`)<br>
 - Mises à jour majeures (`key_updates`)<br>
-
+```php
+https://api.axelib.com/0.1/get/legal/terms_of_service
+https://api.axelib.com/0.1/get/legal/privay_policy
+...
+```
 
 ### LIST
 
