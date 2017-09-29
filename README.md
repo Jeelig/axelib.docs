@@ -187,7 +187,21 @@ var data = {
 	... 
 }
 ```
+Il est également possible de créer des enregistrements en mode <strong>bulk</strong> (plusieurs lignes à la fois).<br>
+Pour cela, il faut transmettre non plus un objet avec ses propriétés mais un tableau d'objets.
+```php
+https://api.axelib.com/0.1/post/{entity}
 
+var data = [{ 
+	"field_name": "field_value"
+	... 
+	}, { 
+	"field_name": "field_value"
+	... 
+	}
+	...
+    ]
+}
 
 ### GET
 
