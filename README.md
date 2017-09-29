@@ -214,6 +214,11 @@ var data = {
 	"fields": "field_1, field_2, ..."
 }
 ```
+La méthode GET est également utilisée pour afficher les informations légales relatives à l'application utilisée.
+ * Mentions légales / Conditions d'utilisation (`terms_of_service`)
+ * Politique de confidentialité (`privay_policy`)
+ * Règles relatives à la vie privée (`cookies_polity`)
+ * Mises à jour majeures (`key_updates`)
 
 
 ### LIST
