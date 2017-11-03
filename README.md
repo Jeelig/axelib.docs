@@ -267,6 +267,15 @@ var data = {
 }
 ```
 
+Or in single line to combine operations
+
+```js
+var data = {
+  "Or(type,And(name,age)): ":=2,:=toto,<18 
+}
+```
+=> where type=2 or (name="toto" and age<=18)
+
 <strong>Ordering</strong>
 
 ```js
