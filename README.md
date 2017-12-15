@@ -412,8 +412,8 @@ Sinon, pour lire des données sur la table utilisateur, dans le template on ajou
 
 ### PUSH
 
-L'ID de l'utilisateur destinataire de la notification doit être fournie dans le GET. Si celui-ci possède un device il reçoit une notification push sur Android ou iOS.
-Le champs additionnal_info permet d'envoyer des informations complémentaires sans que celles-ci ne soient affichées dans le texte de la notification.
+L'ID de l'utilisateur destinataire de la notification doit être fournie dans le GET. Si celui-ci possède un device il reçoit une notification push sur Android ou iOS.<br>
+Le champs <strong>additionnal_info</strong> permet d'envoyer des informations complémentaires sans que celles-ci ne soient affichées dans le texte de la notification. Ce champs sera lu en réception du push sur le device destinataire.
 ```php
 https://api.axelib.com/0.1/push/user/{ID}
 
@@ -423,7 +423,17 @@ var data = {
 	additional_info: "ma_valeur" ou "{ 'test': 'ma_valeur' }"
 }
 ```
+Pour envoyer une notifications à tous les utilisateurs de l'application, il faut utiliser un <strong>broadcast</strong>. Pour ce faire, plûtot que de renseigner l'ID du destinataire de la notification, il faut mettre la chaine de caractère <i>broadcast</i>.<br>
+Un push broadcast est toujours envoyé en utilisant un template de communitcation (échange).<br>
+Le champs target, permet de définir une cible. Deux cas possibles, "all_but_sender" (tous les utilisateurs sauf celui qui envoie la notification) ou "all".
+```php
+https://api.axelib.com/0.1/push/instance/broadcast
 
+var data = { 
+	template: "Notification", 
+	target: "all_but_sender", //ou "sender"
+}
+```
 
 ### CHARGE
 
