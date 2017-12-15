@@ -452,5 +452,19 @@ var data = {
 
 
 
+### DEVICESTATUS
+
+Cette méthode permet de lire / mettre à jour le status de notifications d'un device.
+Si aucun paramètre n'est transmis dans le POST, elle renverra le statut actuel, sinon en treansmettant status à 1 ou 0 elle activera ou désactivera les notifications pour ce device.
+```php
+https://api.axelib.com/0.1/devicestatus/instance
+
+var data = { 
+	status: 0 / 1 
+}
+```
+
+
+
 
 
