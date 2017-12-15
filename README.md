@@ -412,13 +412,15 @@ Sinon, pour lire des données sur la table utilisateur, dans le template on ajou
 
 ### PUSH
 
-L'ID de l'utilisateur destinataire de la notification doit être fournie dans le GET. Si celui-ci possède un device il reçoit une notification push sur Android ou iOS
+L'ID de l'utilisateur destinataire de la notification doit être fournie dans le GET. Si celui-ci possède un device il reçoit une notification push sur Android ou iOS.
+Le champs additionnal_info permet d'envoyer des informations complémentaires sans que celles-ci ne soient affichées dans le texte de la notification.
 ```php
 https://api.axelib.com/0.1/push/user/{ID}
 
 var data = { 
 	title: "Push title", 
-	message: "Push body … " 
+	message: "Push body … ",
+	additional_info: "ma_valeur" ou "{ 'test': 'ma_valeur' }"
 }
 ```
 
