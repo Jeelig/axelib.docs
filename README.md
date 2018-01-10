@@ -434,6 +434,15 @@ var data = {
 	target: "all_but_sender", //ou "sender"
 }
 ```
+Avec la notion de canaux (channels) il est possible d'envoyer des notifications à une portions d'utilisateurs abonnés à un canal (cf. devicestatus channels)<br>
+Pour ce faire, en lieu et place de "instance" transmettre le nom du canal sélectionné.
+```php
+https://api.axelib.com/0.1/push/{my_channel_name}/broadcast
+
+var data = { 
+	template: "Notification"
+}
+```
 
 ### CHARGE
 
@@ -475,8 +484,17 @@ var data = {
 	status: 0 / 1 
 }
 ```
+The Device status method can also be used to subscribe / unsubscribe to a channel. A channel is a collection of user having the same interest, that want to be notified by email or push to new content, or events ...<br>
+Instead of instance, the user will then send the name of the channel he want to (un)subscribe.<br><br>
+1 : for subscription<br>
+0 : for unsubscription 
+```php
+https://api.axelib.com/0.1/devicestatus/my_channel_name
 
-
+var data = { 
+	status: 0 / 1 
+}
+```
 
 
 
